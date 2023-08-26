@@ -1,0 +1,5 @@
+Upper Limit: 1000
+Elapsed Time: 0.0935 seconds
+Number of Pairs: 0
+Timestamp: 2023-08-26 11:49:46
+
