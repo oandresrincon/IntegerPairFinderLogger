@@ -41,14 +41,6 @@ The program will display the following information:
 - Number of pairs found.
 - Name of the file where the pairs are saved.
 
-# Example
-
-Here's an example usage:
-
-## Example
-
-Here's an example usage:
-
 ## Author
 
 Oscar Rincon
