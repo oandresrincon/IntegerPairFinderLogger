@@ -54,7 +54,7 @@ def find_and_save_pairs(limit, filename):
     print(f"Pairs saved to: {updated_filename}")
 
 # Set the upper limit for 'a' and 'b'
-upper_limit = 100_000
+upper_limit = 1000_000
 # Define the base output file name
 file_name = "pairs"
 # Call the function to find and save pairs

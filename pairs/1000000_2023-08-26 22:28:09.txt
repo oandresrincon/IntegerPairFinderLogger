@@ -1,0 +1,20 @@
+Upper Limit: 1000000
+Timestamp: 2023-08-26 22:28:09
+Pair found: a = 2, b = 2
+Pair found: a = 2, b = 6
+Pair found: a = 3, b = 3
+Pair found: a = 3, b = 5
+Pair found: a = 3, b = 9
+Pair found: a = 5, b = 3
+Pair found: a = 5, b = 15
+Pair found: a = 6, b = 2
+Pair found: a = 9, b = 3
+Pair found: a = 9, b = 27
+Pair found: a = 11, b = 17
+Pair found: a = 15, b = 5
+Pair found: a = 17, b = 11
+Pair found: a = 27, b = 9
+
+Total Pairs Found: 14
+Elapsed Time: 8492.1312 seconds
+Total Pairs Found: 14
