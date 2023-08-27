@@ -1,6 +1,6 @@
-# Integer Pair Finder and Logger
+# Pairs Finding and Saving
 
-This Python program finds pairs of integers (a, b) that satisfy specific conditions, calculates some statistics, and saves the results to a text file.
+This Python script finds pairs of integers (a, b) that satisfy specific conditions and saves them to a text file
 
 ## Description
 
@@ -10,19 +10,30 @@ This program searches for integer pairs (a, b) within specified limits that sati
 
 It then calculates various statistics about the process and the results, including the number of pairs found and the elapsed time. The results are saved to a text file with a name based on the provided filename and the upper limit of the search.
 
+## Requirements
+
+- Python version 3.10.6 used in this script
+- NumPy library
+- tqdm library
+
+You can install the required libraries using the following command:
+
+```bash
+pip install -r requirements.txt
+
 ## Usage
 
 1. Install Python if not already installed.
 
-2. Save the program code to a file named `integer_pair_finder.py`.
+2. Save the program code to a file named `find_pairs_integers.py`.
 
-3. Open a terminal or command prompt.
+3. Open a terminal or command prompt
 
-4. Navigate to the directory where the `integer_pair_finder.py` file is located.
+4. Navigate to the directory where the `find_pairs_integers.py` file is located.
 
 5. Run the program using the command:
    ```bash
-   python integer_pair_finder.py
+  python find_pairs_integers.py
 
 ## Customization
 
