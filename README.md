@@ -20,6 +20,7 @@ You can install the required libraries using the following command:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Usage
 
@@ -34,7 +35,7 @@ pip install -r requirements.txt
 5. Run the program using the command:
    ```bash
   python find_pairs_integers.py
-
+  ```
 ## Customization
 
 You can customize the program's behavior by modifying the following variables in the code:
