@@ -33,8 +33,10 @@ pip install -r requirements.txt
 4. Navigate to the directory where the `find_pairs_integers.py` file is located.
 
 5. Run the program using the command:
-   ```bash
-  python find_pairs_integers.py
+
+```bash
+python find_pairs_integers.py
+```
 
 ## Customization
 
