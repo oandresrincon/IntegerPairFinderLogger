@@ -5,8 +5,8 @@ This Python script finds pairs of integers (a, b) that satisfy specific conditio
 ## Description
 
 This program searches for integer pairs (a, b) within specified limits that satisfy the following conditions:
-- (a - 1) % (3 * b - 1) == 0
-- (b - 1) % (3 * a - 1) == 0
+- (3 * b - 1) % (a - 1)  == 0
+- (3 * a - 1) % (b - 1) == 0
 
 It then calculates various statistics about the process and the results, including the number of pairs found and the elapsed time. The results are saved to a text file with a name based on the provided filename and the upper limit of the search.
 

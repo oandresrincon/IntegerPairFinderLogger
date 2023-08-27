@@ -1,13 +1,13 @@
 import numpy as np
 import time
 import os
-from multiprocessing import Pool, cpu_count
+from tqdm import tqdm
 
 def find_pairs_for_a(a, b_values):
-    conditions_a = (a - 1) % (3 * b_values - 1) == 0
+    conditions_a = (3 * b_values - 1) % (a - 1) == 0
     found_b_values = b_values[conditions_a]
 
-    conditions_b = (found_b_values - 1) % (3 * a - 1) == 0
+    conditions_b = (3 * a - 1) % (found_b_values - 1) == 0
     found_pairs_b = found_b_values[conditions_b]
 
     pairs = [(a, b) for b in found_pairs_b]
@@ -28,24 +28,24 @@ def find_and_save_pairs(limit, filename):
 
     with open(updated_filename, "w") as file:
         file.write(f"Upper Limit: {limit}\n")
-        file.write(f"Timestamp: {timestamp}\n\n")
+        file.write(f"Timestamp: {timestamp}\n")
 
-    num_processes = cpu_count()
-    with Pool(num_processes) as pool:
-        pairs_list = pool.starmap(find_pairs_for_a, [(a, b_values) for a in a_values])
+        # Create a progress bar for the loop over 'a' values
+        for a in tqdm(a_values, desc="Finding pairs"):
+            pairs = find_pairs_for_a(a, b_values)
 
-        for pairs in pairs_list:
-            for a, b in pairs:
-                with open(updated_filename, "a") as file:
+            if len(pairs) > 0:
+                for a, b in pairs:
                     file.write(f"Pair found: a = {a}, b = {b}\n")
-                pair_count += 1
+                    pair_count += 1
 
-    end_time = time.time()
+    end_time = time.time()  # Record the end time
     elapsed_time = end_time - start_time
 
     with open(updated_filename, "a") as file:
         file.write(f"\nTotal Pairs Found: {pair_count}\n")
         file.write(f"Elapsed Time: {elapsed_time:.4f} seconds\n")
+        file.write(f"Total Pairs Found: {pair_count}")
 
     print(f"Upper Limit: {limit}")
     print(f"Timestamp: {timestamp}")
@@ -54,7 +54,7 @@ def find_and_save_pairs(limit, filename):
     print(f"Pairs saved to: {updated_filename}")
 
 # Set the upper limit for 'a' and 'b'
-upper_limit = 10
+upper_limit = 100_000
 # Define the base output file name
 file_name = "pairs"
 # Call the function to find and save pairs
