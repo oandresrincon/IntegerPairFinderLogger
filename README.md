@@ -12,7 +12,7 @@ It then calculates various statistics about the process and the results, includi
 
 ## Requirements
 
-- Python version 3.10.6 used in this script
+- Python version 3.10.6 (used in this script)
 - NumPy library
 - tqdm library
 
